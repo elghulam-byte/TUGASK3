@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Background halaman */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("forest.jpg") center/cover no-repeat;
+  padding-top: 30px;
+  position: relative;
+}
+
+/* Judul di atas */
+.judul {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+
+/* Wrapper */
+.konten-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* Kotak teks */
+.kotak-teks {
+  width: 60%;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+}
+
+/* Menu kanan */
+.menu-kanan {
+  width: 25%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+.menu-kanan ul {
+  padding-left: 20px;
+}
+
+.menu-kanan li {
+  margin-bottom: 10px;
+}
+
+.menu-kanan a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu-kanan a:hover {
+  color: #ffd27f;
+}
