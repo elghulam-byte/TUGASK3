@@ -150,6 +150,7 @@
   <nav>
     <h1>PAMA</h1>
     <ul>
+      <li class = "home-btn">Home</li>
       <li data-target="profil">Profil</li>
       <li data-target="perusahaan">Perusahaan</li>
       <li data-target="sop">SOP</li>
@@ -262,7 +263,22 @@
       }
     });
   });
-</script>
+
+const homeBtn = document.querySelector(".home-btn");
+
+homeBtn.addEventListener("click", () => {
+  // scroll balik ke HERO
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  // tampilkan semua section
+  document.querySelectorAll("section").forEach(sec => {
+    sec.style.display = "block";
+  });
+});
+    </script>
 
 </body>
 </html>
