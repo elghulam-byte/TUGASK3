@@ -4,128 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Profesional Kelompok [Nama Kelompok]</title>
+    <title>Profil Profesional Kelompok</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* --- Bagian CSS yang Lebih Elegan --- */
+        /* =========================
+           BASE COLOR (LIGHT MODE)
+        ========================== */
         :root {
-            --warna-utama: #1a2a47;
-            /* Biru Gelap/Navy untuk kesan profesional */
-            --warna-aksen: #007bff;
-            /* Aksen Biru Muda untuk highlight */
-            --warna-latar: #ffffff;
-            --warna-latar-kartu: #f8f9fa;
-            /* Latar belakang kartu yang lebih terang */
-            --warna-teks: #343a40;
-            /* Hitam semi-gelap */
-            --font-judul: 'Poppins', sans-serif;
-            --font-teks: 'Arial', sans-serif;
+            --warna-utama: #1A73E8;
+            --warna-aksen: #66B2FF;
+            --warna-latar: #F1F5F9;
+            --warna-latar-kartu: #FFFFFF;
+            --warna-teks: #1E293B;
         }
 
+        /* =========================
+           DARK MODE
+        ========================== */
+        body.dark {
+            --warna-utama: #4C8BFF;
+            --warna-aksen: #8AB5FF;
+            --warna-latar: #0F172A;
+            --warna-latar-kartu: #1E293B;
+            --warna-teks: #E2E8F0;
+        }
+
+        /* =========================
+           GLOBAL STYLE
+        ========================== */
         body {
-            font-family: var(--font-teks);
+            font-family: Arial;
             margin: 0;
             padding: 0;
-            background-color: var(--warna-latar-kartu);
+            background-color: var(--warna-latar);
             color: var(--warna-teks);
-            line-height: 1.6;
+            transition: background 0.4s, color 0.4s;
         }
 
-        /* --- CSS Tambahan untuk Menu Beranda/Navigasi --- */
+        .transition {
+            transition: 0.4s ease;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
         .top-nav {
             background-color: var(--warna-utama);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-link-container {
-            max-width: 1280px;
-            margin: 0 auto;
             padding: 10px 30px;
             display: flex;
-            justify-content: flex-start;
-            /* Posisikan ke kiri */
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .nav-link {
-            font-family: var(--font-judul);
             color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            margin-right: 15px;
             font-weight: 600;
-            transition: color 0.3s ease;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: 0.3s;
         }
 
         .nav-link:hover {
             color: var(--warna-aksen);
         }
 
-        /* --- Akhir CSS Navigasi --- */
+        /* =========================
+           TOGGLE DARK MODE BUTTON
+        ========================== */
+        .toggle-btn {
+            padding: 8px 16px;
+            background: white;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--warna-utama);
+            transition: 0.3s;
+        }
 
-
-        .header-profil {
-            background-color: var(--warna-utama);
+        .toggle-btn:hover {
+            background: var(--warna-aksen);
             color: white;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+        .header-profil {
             padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #E2E8F0;
+            transition: 0.4s;
+        }
+
+        body.dark .header-profil {
+            background-color: #1E293B;
         }
 
         .header-profil h1 {
-            font-family: var(--font-judul);
-            font-weight: 700;
-            margin-bottom: 5px;
+            font-family: 'Poppins';
             font-size: 2.5em;
+            color: var(--warna-utama);
+            transition: 0.4s;
         }
 
         .header-profil p {
-            font-weight: 300;
-            font-size: 1.1em;
+            color: #475569;
         }
 
+        body.dark .header-profil p {
+            color: #CBD5E1;
+        }
+
+        /* =========================
+           CONTAINER
+        ========================== */
         .container {
             max-width: 1280px;
-            margin: 50px auto;
+            margin: 40px auto;
             padding: 0 30px;
         }
 
         .section-title {
-            font-family: var(--font-judul);
             text-align: center;
+            font-size: 1.8em;
+            font-family: Poppins;
             color: var(--warna-utama);
-            margin-bottom: 40px;
-            font-weight: 600;
         }
 
+        /* =========================
+           GRID & CARD
+        ========================== */
         .grid-anggota {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
 
         .kartu-anggota {
-            background-color: var(--warna-latar);
-            border: 1px solid #e9ecef;
+            background-color: var(--warna-latar-kartu);
             border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
             overflow: hidden;
-            text-align: center;
-            transition: all 0.4s ease;
+            transition: 0.4s ease;
             cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
         }
 
         .kartu-anggota:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
         }
 
         .foto-container {
             position: relative;
             padding-top: 100%;
-            /* Rasio 1:1 untuk gambar */
             overflow: hidden;
         }
 
@@ -136,112 +171,116 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Placeholder styling */
             background-color: #ccc;
         }
 
         .detail-anggota {
-            padding: 25px;
-            flex-grow: 1;
+            padding: 20px;
         }
 
         .detail-anggota h3 {
-            font-family: var(--font-judul);
+            font-family: Poppins;
             color: var(--warna-utama);
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .detail-anggota p strong {
-            color: var(--warna-aksen);
-        }
-
-        .detail-anggota p {
-            margin: 5px 0 15px 0;
-            font-size: 0.95em;
-            color: #6c757d;
         }
 
         .keahlian-list {
-            list-style: none;
+            margin: 10px 0;
             padding: 0;
-            margin-top: 15px;
-            text-align: center;
+            list-style: none;
         }
 
         .keahlian-list li {
-            background-color: #e9ecef;
+            background-color: #E8F1FF;
             color: var(--warna-utama);
-            display: inline-block;
             padding: 6px 12px;
-            margin: 4px;
             border-radius: 20px;
-            font-size: 0.8em;
-            font-weight: 400;
+            margin: 4px;
+            display: inline-block;
+            font-size: 0.75em;
         }
 
+        body.dark .keahlian-list li {
+            background-color: #334155;
+            color: #8AB5FF;
+        }
+
+        /* =========================
+           ANIMASI DETAIL (Smooth)
+        ========================== */
         .detail-tambahan {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px dashed #ced4da;
-            text-align: left;
-            display: none;
-            font-style: italic;
-            font-size: 0.9em;
-            color: #495057;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.6s ease, opacity 0.4s ease;
+            padding-left: 4px;
         }
 
-        .detail-tambahan strong {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--warna-utama);
+        .detail-tambahan.open {
+            max-height: 200px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        /* =========================
+           DARK MODE KARTU
+        ========================== */
+        body.dark .kartu-anggota {
+            background-color: #1E293B;
+            border: 1px solid #334155;
         }
     </style>
 </head>
 
 <body>
 
+    <!-- ======================================
+         NAVBAR + BUTTON DARK MODE
+    ======================================= -->
     <div class="top-nav">
-        <div class="nav-link-container">
+        <div>
             <a href="EL.html" class="nav-link">BERANDA</a>
         </div>
+
+        <button class="toggle-btn" id="darkToggle">Dark Mode</button>
     </div>
 
-    <a name="top"></a>
-    <header class="header-profil">
+    <header class="header-profil transition">
         <h1>KUMPULAN WONG ATOS</h1>
         <p>DIPUJI TERIMAKASIH, DIHINA TAK JOTOSI</p>
     </header>
 
     <div class="container">
+
         <h2 class="section-title">Anggota Tim & Keahlian Inti</h2>
 
         <div class="grid-anggota">
 
-            <div class="kartu-anggota" data-id="1">
-                <div class="foto-container">
-                    <img src="rapael.jpg" alt="Foto RAFAEL" class="foto-profil">
-                </div>
+            <!-- ======================================
+                 TEMPLATE CARD (tidak diubah isinya)
+            ======================================= -->
+            <div class="kartu-anggota">
+                <div class="foto-container"><img src="rapael.jpg" class="foto-profil"></div>
                 <div class="detail-anggota">
                     <h3>Raffael Putra Masshaby</h3>
                     <p><strong>Peran:</strong> Ketua Kelompok</p>
+
                     <ul class="keahlian-list">
+                        <li>Front End</li>
                         <li>Makan</li>
                         <li>Tidur</li>
-                        <li>Cod Pelg</li>
+                        <li>Cod Velg</li>
                     </ul>
+
                     <div class="detail-tambahan">
-                        <strong>Kutipan:</strong> "Luwe aku rek tulong njaluk mangan sak iprit ae."
-                        <br>
-                        Ig: @raffael_masshaby
+                        "Luwe aku rek tulong njaluk mangan sak iprit ae."
+                        <br>Ig: @raffael_masshaby
                     </div>
                 </div>
             </div>
 
             <div class="kartu-anggota" data-id="2">
                 <div class="foto-container">
-                    <img src="rega.jpg" alt="Foto REGA" class="foto-profil">
+                    <img src="rega.jpg" class="foto-profil">
                 </div>
                 <div class="detail-anggota">
                     <h3>Rajwa Ega Ganeswara</h3>
@@ -252,16 +291,16 @@
                         <li>Adobe Ilustrator</li>
                     </ul>
                     <div class="detail-tambahan">
-                        <strong>Kutipan:</strong> "isuk ojo ngenteni sore,sore ojo ngenteni isuk."
-                        <br>
-                        Ig: @gnswr19
+                        <strong>Kutipan:</strong>
+                        "isuk ojo ngenteni sore,sore ojo ngenteni isuk."
+                        <br>Ig: @gnswr19
                     </div>
                 </div>
             </div>
-
+            
             <div class="kartu-anggota" data-id="3">
                 <div class="foto-container">
-                    <img src="alpat.jpg" alt="Foto ALPAT" class="foto-profil">
+                    <img src="alpat2.jpg" class="foto-profil">
                 </div>
                 <div class="detail-anggota">
                     <h3>Al Fath Raya Maulana</h3>
@@ -271,16 +310,16 @@
                         <li>CSS</li>
                     </ul>
                     <div class="detail-tambahan">
-                        <strong>Kutipan:</strong> "Jangan Karna Aku Malang, Kamu Kira Semua Sayang"
-                        <br>
-                        Ig: @alpaatttt_
+                        <strong>Kutipan:</strong>
+                        "Jangan Karna Aku Malang, Kamu Kira Semua Sayang"
+                        <br>Ig: @alpaatttt_
                     </div>
                 </div>
             </div>
-
+            
             <div class="kartu-anggota" data-id="4">
                 <div class="foto-container">
-                    <img src="Aby.jpg" alt="Foto [Nama Anggota 4]" class="foto-profil">
+                    <img src="Aby.jpg" class="foto-profil">
                 </div>
                 <div class="detail-anggota">
                     <h3>Muhammad Rayyan Abie Dewanata</h3>
@@ -291,20 +330,20 @@
                         <li>Social Media Ads</li>
                     </ul>
                     <div class="detail-tambahan">
-                        <strong>Kutipan:</strong> "bekerja keraslah, karena kita tidak punya orang dalam"
-                        <br>
-                        Ig: @rayyanabiee
+                        <strong>Kutipan:</strong>
+                        "bekerja keraslah, karena kita tidak punya orang dalam"
+                        <br>Ig: @rayyanabiee
                     </div>
                 </div>
             </div>
-
+            
             <div class="kartu-anggota" data-id="5">
                 <div class="foto-container">
-                    <img src="El.jpg" alt="Foto REGA" class="foto-profil">
+                    <img src="El.jpg" class="foto-profil">
                 </div>
                 <div class="detail-anggota">
                     <h3>Ghulam El Firdausy</h3>
-                    <p><strong>Peran:</strong> Doa</p>
+                    <p><strong>Peran:</strong> Instruktur Rekayasa Front End</p>
                     <ul class="keahlian-list">
                         <li>CSS</li>
                         <li>Html</li>
@@ -312,37 +351,41 @@
                         <li>Tukang Antemi Wong</li>
                     </ul>
                     <div class="detail-tambahan">
-                        <strong>Kutipan:</strong> "Adus Salin Metu Ngamok."
-                        <br>
-                        Ig: @ghulam_el
+                        <strong>Kutipan:</strong>
+                        "Adus Salin Metu Ngamok."
+                        <br>Ig: @ghulam_el
                     </div>
-                </div>
-            </div>
-
+                    <!-- Tambahkan kartu lainnya seperti versi sebelumnya -->
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const kartuAnggota = document.querySelectorAll('.kartu-anggota');
+        // ==========================
+        // Smooth Slide Detail
+        // ==========================
+        document.querySelectorAll('.kartu-anggota').forEach(card => {
+            card.addEventListener('click', () => {
 
-            kartuAnggota.forEach(kartu => {
-                kartu.addEventListener('click', function () {
-                    const detailTambahan = kartu.querySelector('.detail-tambahan');
+                let detail = card.querySelector('.detail-tambahan');
 
-                    // Logic untuk menampilkan/menyembunyikan detail
-                    if (detailTambahan.style.display === 'block') {
-                        detailTambahan.style.display = 'none';
-                    } else {
-                        // Sembunyikan semua detail tambahan lainnya sebelum menampilkan yang baru
-                        document.querySelectorAll('.detail-tambahan').forEach(d => {
-                            d.style.display = 'none';
-                        });
-
-                        detailTambahan.style.display = 'block';
-                    }
-                });
+                if (detail.classList.contains("open")) {
+                    detail.classList.remove("open");
+                } else {
+                    document.querySelectorAll('.detail-tambahan').forEach(d => d.classList.remove("open"));
+                    detail.classList.add("open");
+                }
             });
+        });
+
+        // ==========================
+        // DARK MODE TOGGLE
+        // ==========================
+        const toggleBtn = document.getElementById("darkToggle");
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+
+            toggleBtn.textContent =
+                document.body.classList.contains("dark") ? "Light Mode" : "Dark Mode";
         });
     </script>
 
