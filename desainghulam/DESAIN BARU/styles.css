@@ -1,0 +1,249 @@
+/* Pengaturan Umum & Reset */
+:root {
+    --primary-color: #008000; /* Hijau Tua/Corporate */
+    --secondary-color: #e8f5e9; /* Latar Belakang Hijau Sangat Terang */
+    --accent-color: #8bc34a; /* Hijau Muda untuk Aksi/Highlight */
+    --text-color: #2e7d32; /* Teks Hijau Gelap */
+    --light-text: #fff;
+    --border-color: #c8e6c9;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Tombol Aksi (CTA) */
+.cta-btn {
+    background-color: var(--accent-color); /* Hijau Muda */
+    color: var(--light-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background-color: #689f38; /* Hijau Muda lebih gelap */
+}
+
+
+/* Header/Navigasi Utama */
+.main-header {
+    background-color: var(--light-text);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: 800;
+    color: var(--primary-color); /* Logo Hijau Tua */
+    margin-right: 30px;
+}
+
+.main-nav a {
+    margin: 0 15px;
+    color: #555;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color); /* Hover Hijau Muda */
+    text-decoration: none;
+}
+
+
+/* Tata Letak Utama & Konten */
+.main-container {
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 60px 20px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+section:last-child {
+    border-bottom: none;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://wbpu.co.id/wp-content/uploads/2023/10/Banner-paling-atas-scaled.jpg') center/cover no-repeat;
+    color: var(--light-text);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--light-text);
+}
+
+
+/* Layanan (Services) */
+.services-section {
+    background-color: var(--light-text);
+    text-align: center;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1 1 300px; 
+    background-color: var(--secondary-color); /* Latar belakang card Hijau Sangat Terang */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: box-shadow 0.3s;
+    border: 1px solid var(--border-color);
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Tentang Kami (About) */
+.about-section {
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1em;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.stats-grid div {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.stats-grid span {
+    display: block;
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--accent-color); /* Angka statistik Hijau Muda */
+}
+
+/* Kontak (Contact) */
+.contact-section {
+    background-color: var(--light-text);
+    text-align: center;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(139, 195, 74, 0.5); /* Shadow fokus hijau */
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #388e3c; /* Hijau Medium */
+    color: white;
+}
+
+.social-links a {
+    color: var(--light-text);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsif Dasar */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+    }
+    .header-left, .header-right {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .main-nav {
+        margin-top: 10px;
+    }
+    .service-list {
+        flex-direction: column;
+    }
+    .stats-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
