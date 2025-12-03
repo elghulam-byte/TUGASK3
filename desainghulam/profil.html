@@ -9,9 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* =========================
-           BASE COLOR (LIGHT MODE)
-        ========================== */
         :root {
             --warna-utama: #1A73E8;
             --warna-aksen: #66B2FF;
@@ -20,9 +17,6 @@
             --warna-teks: #1E293B;
         }
 
-        /* =========================
-           DARK MODE
-        ========================== */
         body.dark {
             --warna-utama: #4C8BFF;
             --warna-aksen: #8AB5FF;
@@ -31,9 +25,6 @@
             --warna-teks: #E2E8F0;
         }
 
-        /* =========================
-           GLOBAL STYLE
-        ========================== */
         body {
             font-family: Arial;
             margin: 0;
@@ -47,9 +38,6 @@
             transition: 0.4s ease;
         }
 
-        /* =========================
-           NAVBAR
-        ========================== */
         .top-nav {
             background-color: var(--warna-utama);
             padding: 10px 30px;
@@ -57,6 +45,11 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-links-container { /* Kontainer baru untuk link di sebelah kanan */
+            display: flex;
+            align-items: center;
         }
 
         .nav-link {
@@ -71,9 +64,6 @@
             color: var(--warna-aksen);
         }
 
-        /* =========================
-           TOGGLE DARK MODE BUTTON
-        ========================== */
         .toggle-btn {
             padding: 8px 16px;
             background: white;
@@ -83,6 +73,7 @@
             font-weight: bold;
             color: var(--warna-utama);
             transition: 0.3s;
+            margin-left: 10px; /* Tambahkan sedikit jarak dari link LANJUT */
         }
 
         .toggle-btn:hover {
@@ -90,9 +81,6 @@
             color: white;
         }
 
-        /* =========================
-           HEADER
-        ========================== */
         .header-profil {
             padding: 60px 20px;
             text-align: center;
@@ -119,9 +107,6 @@
             color: #CBD5E1;
         }
 
-        /* =========================
-           CONTAINER
-        ========================== */
         .container {
             max-width: 1280px;
             margin: 40px auto;
@@ -135,9 +120,6 @@
             color: var(--warna-utama);
         }
 
-        /* =========================
-           GRID & CARD
-        ========================== */
         .grid-anggota {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -204,9 +186,6 @@
             color: #8AB5FF;
         }
 
-        /* =========================
-           ANIMASI DETAIL (Smooth)
-        ========================== */
         .detail-tambahan {
             max-height: 0;
             overflow: hidden;
@@ -221,9 +200,6 @@
             margin-top: 10px;
         }
 
-        /* =========================
-           DARK MODE KARTU
-        ========================== */
         body.dark .kartu-anggota {
             background-color: #1E293B;
             border: 1px solid #334155;
@@ -233,16 +209,17 @@
 
 <body>
 
-    <!-- ======================================
-         NAVBAR + BUTTON DARK MODE
-    ======================================= -->
     <div class="top-nav">
         <div>
             <a href="EL.html" class="nav-link">BERANDA</a>
         </div>
-
-        <button class="toggle-btn" id="darkToggle">Dark Mode</button>
-    </div>
+        
+        <div class="nav-links-container">
+            <a href="perusahaan.html" class="nav-link">LANJUT</a>
+            
+            <button class="toggle-btn" id="darkToggle">Dark Mode</button>
+        </div>
+        </div>
 
     <header class="header-profil transition">
         <h1>KUMPULAN ORANG SUKSES</h1>
@@ -254,10 +231,6 @@
         <h2 class="section-title">Anggota Tim & Keahlian Inti</h2>
 
         <div class="grid-anggota">
-
-            <!-- ======================================
-                 TEMPLATE CARD (tidak diubah isinya)
-            ======================================= -->
             <div class="kartu-anggota">
                 <div class="foto-container"><img src="rapael.jpg" class="foto-profil"></div>
                 <div class="detail-anggota">
@@ -358,14 +331,11 @@
                         "Adus Salin Metu Ngamok."
                         <br>Ig: @ghulam_el
                     </div>
-                    <!-- Tambahkan kartu lainnya seperti versi sebelumnya -->
+                </div>
         </div>
     </div>
 
     <script>
-        // ==========================
-        // Smooth Slide Detail
-        // ==========================
         document.querySelectorAll('.kartu-anggota').forEach(card => {
             card.addEventListener('click', () => {
 
@@ -380,9 +350,6 @@
             });
         });
 
-        // ==========================
-        // DARK MODE TOGGLE
-        // ==========================
         const toggleBtn = document.getElementById("darkToggle");
         toggleBtn.addEventListener("click", () => {
             document.body.classList.toggle("dark");

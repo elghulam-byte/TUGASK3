@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Produktif WFH (Satu File)</title>
+
+    <style>
+        /* Pengaturan dasar untuk seluruh halaman */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            /* Warna latar belakang halaman (Light) */
+            color: #333;
+            /* Warna teks utama (Light) */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Pengaturan tata letak utama (artikel) */
+        main {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            /* Warna latar belakang artikel (Light) */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #007bff;
+            margin-top: 0;
+            font-size: 2.2em;
+            transition: color 0.3s;
+        }
+
+        /* Judul bagian */
+        h2 {
+            color: #333;
+            border-left: 5px solid #ffaa00;
+            padding-left: 10px;
+            margin-top: 25px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        /* Daftar (list) */
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Blockquote (untuk kutipan atau poin kunci) */
+        blockquote {
+            background-color: #e6f7ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+            transition: background-color 0.3s;
+        }
+
+        /* Bagian Kesimpulan */
+        .kesimpulan {
+            border-top: 1px dashed #ccc;
+            padding-top: 20px;
+            margin-top: 30px;
+            transition: border-top 0.3s;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 15px;
+            color: #777;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        /* --- Navigasi dan Dark Mode Toggle --- */
+
+        nav {
+            background-color: #007bff;
+            /* Warna biru untuk navbar (Light) */
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffaa00;
+            /* Kuning saat hover */
+        }
+
+        .nav-content {
+            width: 80%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dark-mode-toggle {
+            background: #ffffff;
+            color: #007bff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dark-mode-toggle:hover {
+            background: #f0f0f0;
+        }
+
+        /* --- Gaya Dark Mode --- */
+
+        body.dark-mode {
+            background-color: #121212;
+            /* Latar belakang halaman gelap */
+            color: #e0e0e0;
+            /* Teks utama terang */
+        }
+
+        body.dark-mode main {
+            background-color: #1e1e1e;
+            /* Latar belakang artikel gelap */
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode header h1 {
+            color: #90caf9;
+            /* Biru muda yang lebih lembut */
+        }
+
+        body.dark-mode header {
+            border-bottom: 2px solid #90caf9;
+        }
+
+        body.dark-mode h2 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode blockquote {
+            background-color: #2c2c2c;
+            border-left: 4px solid #90caf9;
+        }
+
+        body.dark-mode .kesimpulan {
+            border-top: 1px dashed #555;
+        }
+
+        body.dark-mode footer {
+            color: #a0a0a0;
+        }
+
+        body.dark-mode nav {
+            background-color: #333;
+            /* Warna gelap untuk navbar */
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background: #444;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .dark-mode-toggle:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <ul>
+                <li><a href="EL.html">Beranda</a></li>
+                <li><a href="#main-content">Tips WFH</a></li>
+            </ul>
+            <button id="darkModeToggle" class="dark-mode-toggle">Mode Gelap</button>
+        </div>
+    </nav>
+
+    <header id="top">
+        <h1>STANDAR OPERASIONAL PERUSAHAAN</h1>
+        <p>Tentang Prosedur Perusahaan</p>
+    </header>
+
+    <main id="main-content">
+        <section>
+            <h2>1. Sistem penambangan berjenjang (Reclamation area)</h2>
+            <p>Sistem penambangan berjenjang dilakukan untuk menjaga kestabilan lereng dan memastikan kegiatan penambangan berlangsung aman serta efisien. Sebelum pekerjaan dimulai, dilakukan survei geologi dan geoteknik
+                 untuk menentukan desain jenjang meliputi tinggi, lebar, dan kemiringan lereng.
+                 Area kerja kemudian dipersiapkan melalui pembersihan lahan, pengupasan topsoil untuk disimpan sebagai media reklamasi, serta pemasangan rambu keselamatan
+                 dan penandaan batas kerja agar aktivitas alat berat berjalan sesuai rencana.
+            </p>
+            <p>Proses penambangan dilaksanakan secara bertahap mengikuti desain jenjang yang telah ditetapkan.
+                 Excavator menggali material sesuai batas aman, sementara dump truck mengangkut material ke disposal
+                 atau stockpile. Setiap jenjang harus dipastikan tidak mengalami overcutting, dan pengawasan 
+                 dilakukan melalui inspeksi harian untuk memantau kondisi lereng. Seluruh peralatan dan operator 
+                 wajib mematuhi ketentuan
+                 keselamatan agar tidak terjadi potensi longsor atau kecelakaan kerja di sekitar area jenjang.
+            </p>
+            <p>
+                Setelah area selesai ditambang, kegiatan dilanjutkan dengan reklamasi melalui penataan kembali 
+                lahan bekas tambang. Topsoil yang telah disimpan sebelumnya digunakan untuk menutup permukaan 
+                lahan, kemudian dilakukan perbaikan drainase serta penanaman vegetasi untuk mengembalikan fungsi 
+                ekologis. Reklamasi pada area penambangan berjenjang bertujuan untuk memperbaiki kondisi lingkungan, 
+                mengurangi erosi, dan memastikan bahwa bekas tambang dapat dimanfaatkan kembali secara berkelanjutan.
+            </p>
+            <ul>
+                <li><strong>Tentukan Jam Kerja:</strong> Tetapkan jam mulai dan selesai yang jelas.</li>
+                <li><strong>Istirahat Terjadwal:</strong> Masukkan waktu istirahat makan siang dan jeda
+                    singkat ke dalam jadwal Anda.</li>
+            </ul>
+        </section>
+
+
+        <hr>
+
+        <section>
+            <h2>2. 🖥️ Ciptakan Ruang Kerja yang Ideal</h2>
+            <p>Ruangan ini harus memiliki pencahayaan yang baik dan sedikit gangguan, idealnya bukan kamar
+                tidur Anda. </p>
+            <ul>
+                <li><strong>Ergonomi:</strong> Pastikan kursi dan meja Anda mendukung postur tubuh yang
+                    baik.
+
+                    [Image of ergonomic home office setup]
+                </li>
+                <li><strong>Bebas Gangguan:</strong> Jauhkan barang-barang yang tidak berhubungan dengan
+                    pekerjaan.</li>
+            </ul>
+        </section>
+
+
+        <hr>
+
+        <section>
+            <h2>3. 📝 Prioritaskan Tugas Harian</h2>
+            <p>Sebelum memulai hari, buat daftar tugas dan identifikasi tugas yang paling penting (MITs).
+            </p>
+            <blockquote>
+                <p><strong>Kunci Sukses:</strong> Fokuskan energi Anda pada MITs ini terlebih dahulu.
+                </p>
+            </blockquote>
+        </section>
+
+        <section class="kesimpulan">
+            <h2>💡 Kesimpulan</h2>
+            <p>Menjadi produktif saat bekerja dari rumah adalah sebuah keterampilan yang membutuhkan latihan
+                dan disiplin. Dengan menciptakan struktur dan membatasi gangguan, Anda dapat mencapai keseimbangan yang
+                sukses.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Artikel Produktivitas</p>
+    </footer>
+
+
+    <script>
+        // Mendapatkan tombol dark mode
+        const toggleButton = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const darkModeKey = 'darkModeEnabled';
+
+        // Fungsi untuk menerapkan mode berdasarkan status
+        function applyDarkMode(isEnabled) {
+            if (isEnabled) {
+                body.classList.add('dark-mode');
+                toggleButton.textContent = 'Mode Terang';
+            } else {
+                body.classList.remove('dark-mode');
+                toggleButton.textContent = 'Mode Gelap';
+            }
+        }
+
+        // Memuat preferensi dari local storage saat halaman dimuat
+        const savedMode = localStorage.getItem(darkModeKey);
+        if (savedMode === 'true') {
+            applyDarkMode(true);
+        } else if (savedMode === 'false') {
+            applyDarkMode(false);
+        } else {
+            // Cek preferensi sistem operasi jika belum ada preferensi tersimpan
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            applyDarkMode(prefersDark);
+        }
+
+        // Menambahkan event listener ke tombol toggle
+        toggleButton.addEventListener('click', () => {
+            // Membalikkan status saat ini
+            const isDarkMode = body.classList.toggle('dark-mode');
+
+            // Menyimpan preferensi ke local storage
+            localStorage.setItem(darkModeKey, isDarkMode);
+
+            // Memperbarui teks tombol
+            toggleButton.textContent = isDarkMode ? 'Mode Terang' : 'Mode Gelap';
+        });
+    </script>
+
+</body>
+
+</html>
