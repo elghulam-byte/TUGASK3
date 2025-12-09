@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profil & SOP Perusahaan Tambang</title>
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        background: #0c0e12;
+        color: #333;
+    }
+    header {
+     background-image: 
+        linear-gradient(135deg, rgba(31,59,115,0.85), rgba(63,108,178,0.85)),
+        url('https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1400&q=60');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     padding: 60px 20px;
+     color: white;
+     text-align: center;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    h1, h2, h3 {
+        font-weight: 600;
+    }
+    section {
+        background: white;
+        margin: 25px auto;
+        width: 88%;
+        padding: 25px;
+        border-radius: 14px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    p {
+        line-height: 1.7;
+    }
+    .popup-trigger {
+        color: #296efc;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+    .popup-trigger:hover {
+        text-decoration: underline;
+    }
+    /* POPUP */
+    .popup-bg {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,.55);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .popup-box {
+        background: #fff;
+        padding: 30px;
+        width: 70%;
+        max-height: 80vh;
+        overflow-y: auto;
+        border-radius: 14px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: scale(0.9);}
+        to {opacity: 1; transform: scale(1);}
+    }
+
+    .close-btn {
+        background: #ff4c4c;
+        color: white;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>STANDAR OPERASIONAL PERUSAHAAN TAMBANG</h1>
+    <p>Tugas Besar Keselamatan dan kesehatan kerja</p>
+</header>
+
+<!-- ================================================================= -->
+<section id="profilKelompok">
+    <h2>1. Profil Kelompok</h2>
+    <p>Kelompok kami terdiri dari individu-individu dengan latar belakang pengetahuan yang berbeda namun memiliki tujuan yang sama, 
+        yaitu mempelajari dan memahami proses industri pertambangan secara menyeluruh.</p>
+    
+    <p class="popup-trigger" onclick="openPopup('popupKelompok')">Lihat Profil Lengkap Anggota →</p>
+</section>
+
+<div class="popup-bg" id="popupKelompok">
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup('popupKelompok')">Tutup</button>
+        <h2>Profil Lengkap Anggota Kelompok</h2>
+        <p>• AL FATH RAYA MAULANA_254107020018</p>
+        <p>• GHULAM EL FIRDAUSY_254107020203</p>
+        <p>• MUHAMMAD RAYYAN ABIE DEWANATA_254107020195</p>
+        <p>• RAFFAEL PUTRA MASSHABY_254107020201</p>
+        <p>• RAJWA EGA GANESWARA_254107020205</p>
+    </div>
+</div>
+
+<!-- ================================================================= -->
+<section id="profilPerusahaan">
+    <h2>2. Profil Perusahaan (PT Pamapersada Nusantara)</h2>
+    <p>PT Pamapersada Nusantara (PAMA) adalah perusahaan jasa kontraktor pertambangan terkemuka di Indonesia yang merupakan anak perusahaan dari PT United Tractors Tbk
+        dan bagian dari Astra Group. Perusahaan ini menyediakan jasa pertambangan batubara, emas, quarry, serta konstruksi jalan dan bendungan. Didirikan pada tahun 1993,
+        PAMA memiliki pengalaman lebih dari 50 tahun, beroperasi di berbagai wilayah Indonesia, dan menjadi salah satu kontraktor tambang terbesar di Tanah Air. </p>
+
+    <p class="popup-trigger" onclick="openPopup('popupPAMA')">Lihat Profil Lengkap Perusahaan →</p>
+</section>
+
+<div class="popup-bg" id="popupPAMA">
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup('popupPAMA')">Tutup</button>
+        <h2>PROFIL PERUSAHAAN</h2>
+        <li>Nama perusahaan: PT Pamapersada Nusantara (PAMA)</li>
+        <li>Induk perusahaan: PT United Tractors Tbk</li>
+        <li>Grup: Astra Group</li>
+        <li>Bidang usaha: Jasa kontraktor pertambangan, termasuk pengelolaan tambang, pemindahan tanah, pengangkutan batu bara dan mineral lainnya</li>
+        <li>Jasa lain: Konstruksi bendungan, pengerjaan jalan, reklamasi dan re-vegetasi lahan bekas tambang</li>
+        <li>Kantor pusat: Jakarta Timur</li>
+        <li>Wilayah operasi: Berbagai wilayah di Indonesia, dengan fokus di Sumatera dan Kalimantan</li>
+        <li>Tahun berdiri: 1993 (sebagai perusahaan mandiri, awalnya dari divisi rental UT sejak 1974)</li>
+        <li>Jumlah karyawan: Lebih dari 10.000 karyawan </li>
+    </div>
+</div>
+
+<!-- ================================================================= -->
+<section id="VISI">
+    <h2>3. VISI PT PAMAPERSADA</h2>
+    <p>Visi adalah gambaran masa depan yang diinginkan dan cita-cita jangka panjang suatu individu atau organisasi. Visi berfungsi sebagai panduan umum yang 
+        menginspirasi dan memberikan arah, sementara misi adalah cara, langkah, dan tindakan nyata yang dilakukan untuk mencapai visi tersebut.  </p>
+
+    <p class="popup-trigger" onclick="openPopup('popupVisi')">Lihat Visi Lengkap →</p>
+</section>
+
+<div class="popup-bg" id="popupVisi">
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup('popupVisi')">Tutup</button>
+        <h2>VISI PERUSAHAAN</h2>
+        <h3>1.</h2>
+        <p>Menjadi perusahaan pertambangan, energi, dan terintegrasi vertikal yang paling disukai melalui orang-orang berbakat dan energik untuk meningkatkan
+            keberlanjutan dan kemakmuran nasional.<p>
+        <h3>2.</h3>
+        <p>Menjadi kontraktor pertambangan kelas dunia dengan produktivitas, rekayasa, keselamatan, dan lingkungan terbaik.<p>
+        <h3>3.</h3>
+        <p>Menjadi perusahaan jasa penambangan terpadu terbesar di Indonesia.<p>
+        <h3>4.</h3>
+        <p>Menjadi produsen energi yang andal, hijau, dan paling efisien.<p>
+        <h3>5.</h3>
+        <p>Menjadi perusahaan pilihan utama dalam bisnis pertambangan, energi, dan terintegrasi vertikal melalui sumber daya manusia yang energik bertalenta 
+            tinggi untuk meningkatkan keberlanjutan dan kesejahteraan bangsa.<p>  
+    </div>
+</div>
+
+<!-- ================================================================= -->
+<section id="MISI">
+    <h2>4. MISI PT PAMAPERSADA</h2>
+    <p>Misi adalah pernyataan yang menjelaskan tujuan utama, alasan keberadaan, serta apa yang dilakukan sebuah organisasi, perusahaan, atau individu. Misi 
+        berfungsi sebagai panduan operasional untuk mencapai visi (gambaran masa depan) dengan menetapkan langkah-langkah, nilai-nilai, dan target yang lebih 
+        konkret dan jangka pendek hingga menengah.</p>
+
+    <p class="popup-trigger" onclick="openPopup('popupMisi')">Lihat Misi Lengkap →</p>
+</section>
+
+<div class="popup-bg" id="popupMisi">
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup('popupMisi')">Tutup</button>
+        <h2>MISI PERUSAHAAN</h2>
+
+        <h3>1.</h3>
+        <p>Mengoptimalkan manfaat terbaik layanan tingkat dunia untuk pelanggan dengan keunggulan dan keandalan operasional.</p>
+
+        <h3>2.</h3>
+        <p>Menciptakan peluang bagi karyawan untuk mengembangkan kompetensi mereka dalam mencapai tujuan.</p>
+
+        <h3>3.</h3>
+        <p>Terus berusaha untuk menguasai kemampuan teknologi dan teknik dengan perspektif lingkungan, kesehatan, dan keselamatan untuk membangun bangsa.</p>
+
+        <h3>4.</h3>
+        <p>Memberikan pengembalian terbaik kepada pemegang saham.</p>
+    </div>
+</div>
+
+<!-- ================================================================= -->
+ <section id="SOP">
+    <h2>5. SOP</h2>
+    <p>SOP atau Standar Operasional Perusahaan adalah prosedur kerja baku yang berisi langkah-langkah standar untuk memastikan setiap kegiatan di tambang dilakukan dengan aman, teratur, dan sesuai aturan.</p>
+    <p>Tujuan SOP yaitu menjaga keselamatan kerja, menyeragamkan cara kerja, meningkatkan efisiensi operasional, dan memastikan perusahaan memenuhi standar hukum serta regulasi pertambangan.</p>
+    <p>SOP berfungsi sebagai pedoman kerja, alat kontrol dan pengawasan, dasar pelatihan, serta dokumentasi resmi yang membantu mencegah kesalahan dan mendukung kelancaran operasi tambang.</p>
+    
+
+    <p class="popup-trigger" onclick="openPopup('popupSOP')">Lihat SOP Lengkap →</p>
+</section>
+
+<div class="popup-bg" id="popupSOP">
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup('popupSOP')">Tutup</button>
+        <h2>Keselamatan Kerja :</h2>
+
+    <ol>
+       <li>Sistem penambangan berjenjang (Reclamation area) untuk mempertahankan kelangsungan hidup hutan.</li>
+       <p>Apa itu Reclamation area?</p>
+       <p>Memulihkan area yang sudah di rekayasa agar bisa digunakan Kembali, dengan cara?</p>
+       <p>1. Landform reshaping ( bentuk ulang kontur)</p>
+       <p>2. Soil treatment (perbaikan tanah) </p>
+       <p>3. Revegetasi (penanaman ulang)</p>
+       <p>4. Drainase dan air</p>
+       <p>5. Monitoring dan maintenance</p>
+
+       <li>Pemasangan rambu rambu lalu lintas di area tambang</li>
+       <p>Pemasangan rambu lalu lintas di area tambang bertujuan menjaga keselamatan pekerja dan kendaraan dengan memberikan informasi yang jelas serta mencegah kecelakaan. Rambu tambang terdiri dari rambu perintah, 
+        peringatan, petunjuk, dan larangan. Rambu dibuat dari material tahan cuaca dengan ukuran minimal 60×60 cm, warna sesuai standar SNI, dan dipasang setinggi 1,5–2 meter. Pemeliharaan dilakukan minimal sebulan sekali, 
+        mencakup pengecekan fisik, kebersihan, dan penggantian rambu yang rusak.</p>
+       
+       <li>Pelatihan dan ijin pengoprasian alat yang dilakukan oleh Operating Training Department (OTD)</li>
+       <p>Tujuan :</p>
+       <p>- Menjamin bahwa seluruh operator alat berat memiliki kompetensi teknis dan sertifikasi resmi</p>
+       <p>-	Mencegah kecelakaan kerja akibat pengoperasian oleh personel tidak terlatih</p>
+       <p>-	Memenuhi regulasi k3 dan ketenagakerjaan yang berlaku</p>
+
+       <li>Pengelolaan dan pengendalian peralatan bergerak dan bermotor berupa :</li>
+       <p>- Perawatan terencana</p>
+       <p>-	P2H (Pelaksanaan Perawatan Harian)</p>
+       <p>-	Larangan pengoperasian alat tanpa ijin</p>
+       <p>-	Persiapan dalam keadaan darurat</p>
+       <p>-	Pemenuhan kelengkapan (persyaratan pada peralatan)</p>
+       <p>-	Ijin kendaraan untuk menuju site</p>
+
+       <li>Adanya alat alat peringatan pada kendaraan berupa :</li>
+       <p>- Sistem klakson</p>
+       <p>- Sistem alarm mundur</p>
+       <p>- Rotary lamp</p>
+       <p>- Bendera (buggy whip) khusus kendaraan kecil (kendaraan sarana)</p>
+
+       <li>Alat pelindung diri (APD) :</li>
+       <p>-	Safety Helmet</p>
+       <p>-	Safety Shoes</p>
+       <p>-	Safety Belt</p>
+       <p>-	Masker</p>
+       <p>-	Ear plug dan ear muff</p>
+       <p>-	Safety Glove</p>
+       <p>-	Apron</p>
+       <p>-	Safety googles</p>
+
+       <li>Upaya penanggulangan Kebakaran :</li>
+       <p>-	Penyediaan APAR, setiap 15 meter pada setiap ruangan atau bangunan, dan 1 APAR untuk setiap mobil sarana dan alat alat berat</p>
+       <p>-	Pengecekan dan rekondisi APAR setiap 6 bulan sekali</p>
+       <p>-	Pelatihan pemadam kebakaran oleh SHE Division</p>
+    </ol>
+       <h2>Kesehatan Kerja :</h2>
+    <ol>
+        <li>Medical Check Up (MCU)</li>
+        <p>-	MCU bagi karyawan baru : bertujuan untuk menilai kondisi Kesehatan calon karyawan, mendeteksi penyakit atau  gangguan Kesehatan, dan memenuhi standar K3</p>
+        <p>-	MCU tahunan bagi karyawan yang bekerja: bertujuan untuk memastikan karyawan tetap fit to work, mendeteksi dini penyakit akibat kerja, dan menjaga produktivitas dan keselamatan kerja.</p>
+
+        <li>Pelaksanaan pemeriksaan Kesehatan sebelum kerja yang meliputi, pemeriksaan:</li>
+        <p>- Thoraxphoto</p>
+        <p>- Urine lengkap</p>
+        <p>- Kimia darah</p>
+        <p>- Audiometric</p>
+        <p>- Rekam Jantung</p>
+
+        <li>Untuk di lapangan kerja disediakan klinik bagi tenaga kerja yang buka selama 24 jam yang dilayani oleh paramedis yang telah mempunyai sertifikat hiperkes dan Keselamatan Kerja.</li>
+        <li>Pembiayaan pengobatan dan perawatan pada karyawan yang sakit maupun yang mengalami kecelakaan.</li>
+        <li>Penyediaan mobil ambulance.</li>
+        <p>Penyediaan mobil ambulans di tempat kerja merupakan bagian penting dari sistem tanggap darurat dan keselamatan kerja, terutama di sektor industri dan pertambangan. Mobil ini berfungsi sebagai unit 
+            medis bergerak yang dapat memberikan pertolongan pertama sebelum pasien dirujuk ke fasilitas kesehatan.</p>
+        
+        <li>Penyuluhan Kesehatan pada karyawan kantin dan catering (jasa boga)</li>
+        <li>Penyediaan kotak-kotak P3K di tempat-tempat yang strategis dan terdapat pekerja yang bekerja sebagai Upaya memberikan pertolongan dini terhadap karyawan yang mengalami kecelakaan </li>
+        <li>Team Search and Rescue (SAR).</li>
+        <p>Tim Search and Rescue (SAR) di tempat kerja berperan penting dalam penanganan keadaan darurat seperti kecelakaan, bencana alam, atau insiden yang memerlukan evakuasi cepat dan pertolongan pertama. </p>
+
+    </ol>
+    </div>
+</div>
+<!-- ================================================================= -->
+ <section id="PROSES">
+    <h2>6. PROSES PRODUKSI</h2>
+    <p>Pertambangan dilakukan secara terbuka dengan menggali lapisan batubara menggunakan alat berat seperti excavator dan dozer. Batubara kemudian diangkut ke stockyard dengan dumptruck untuk dihancurkan 
+        (crushing). Setelah itu, batubara dibawa ke portsite dan dikirim ke pelanggan menggunakan kapal ponton.</p>
+    <p>Alat-alat berat yang digunakan dalam penambangan Batubara terbuka ini antara lain :</p>
+
+    <!-- 🔥 Dua tombol popup baru -->
+    <p class="popup-trigger" onclick="openPopup('popupProses1')">Lihat Alat →</p>
+    <p>Adapun tahap-tahap dalam proses produksi di penambangan terbuka Adalah sebagai berikut:</p>
+    <p class="popup-trigger" onclick="openPopup('popupProses2')">Lihat Tahap Proses →</p>
+</section>
+
+<!-- ===== POPUP 1 ===== -->
+<div class="popup-bg" id="popupProses1">
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup('popupProses1')">Tutup</button>
+    <ol>
+        <li>Excavator, digunakan untuk menggali tanah dan Batubara</li>
+        <li>Dozer, digunakan untuk meratakan/mengumpulkan tanah dan Batubara </li>
+        <li>Grader, digunakan untuk meratakan tanah di jalan tambang dan jalan hauling.</li>
+        <li>Dumptruck, digunakan untuk pengangkutan Batubara ke stockpile/area penyimpanan sementara.</li>
+        <li>Heavy Duty dan artikulit, digunakan untuk pengangkutan tanah galian ke disposal/pembuangan atau pembuangan material yang tidak terpakai</li>
+        <li>Water truck, digunakan untuk penyiraman pada jalan-jalan yang berdebu</li>
+        <li>Forklift dan crane, digunakan sebagai alat angkat baik di workshop maupun di area tambang.</li>
+
+    </ol>
+    </div>
+</div>
+
+<!-- ===== POPUP 2 ===== -->
+<div class="popup-bg" id="popupProses2">
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup('popupProses2')">Tutup</button>
+    <ol>
+        <li>Land Clearing. (Pembersihan Lahan)</li>
+        <p>- Tujuan: Membersihkan lahan dari vegetasi, pohon, Semak, batu, dan bangunan</p>
+        <p>- Fungsi: Membuka akses, mencegah gangguan vegetasi, dan mempersiapkan area kerja yang aman.</p>
+        <p>- Cara kerja: Menebang pohon, mencabut akar, membersihkan semak dan batu menggunakan chainsaw, excavator, atau bulldozer</p>
+        
+        <li>Top Soil Removal. (Pengangkatan Lapisan Tanah atas)</li>
+        <p>- Tujuan: Mengangkat lapisan tanah atas yang kaya bahan organik tapi tidak stabil untuk fondasi.</p>
+        <p>- Fungsi: Mencegah penurunan struktur, menyimpan tanah subur untuk reklamasi atau lanskap</p>
+        <p>-	Cara kerja: Mengupas lapisan ±15–30 cm menggunakan motor grader atau excavator, lalu dipindahkan ke area penyimpanan</p>
+        
+        <li>Excavating. (Penggalian)</li>
+        <p>-	Tujuan: Menggali tanah sesuai desain (misalnya untuk pondasi, saluran, basement)</p>
+        <p>-	Fungsi: menyediakan ruang untuk struktur atau mengatur elevasi bahan</p>
+        <p>-	Cara kerja: Menggali tanah dengan excavator/backhoe sesuai kedalaman dan kemiringan desain, memperhatikan stabilitas lereng dan drainase</p>
+
+        <li>Loading. (Pemindahan ke alat angkut)</li>
+        <p>-	Tujuan: Memindahkan material galian ke alat angkut</p>
+        <p>-	Fungsi: Mengefisienkan proses transportasi material</p>
+        <p>-	Cara kerja: Excavator mengisi dumptruck secara optimal, memastikan muatan sesuai kapasitas dan kondisi material.</p>
+
+        <li>Hauling. (Pengangkatan Material)</li>
+        <p>-	Tujuan: Mengangkut material ke Lokasi timbunan atau pembuangan.</p>
+        <p>-	Fungsi: Menyebarkan atau membuang material sesuai kebutuhan proyek.</p>
+        <p>-	Cara kerja: Dumptruck bergerak dari titik loading ke titik dumping melalui rute yang aman dan efisien</p>
+        
+        <li>Dumping. (Penurunan Material)</li>
+        <p>-	Tujuan: Menurunkan material dari truk ke Lokasi yang ditentukan.</p>
+        <p>-	Fungsi: Menyusun material sesuai desain atau membuang ke disposal area</p>
+        <p>-	Cara kerja: Truk mengangkat bak dan menurunkan muatan di lokasi yang telah disiapkan, memperhatikan akses dan keamanan</p>
+
+        <li>Spreading. (Penyebaran Material)</li>
+        <p>-	Tujuan: Meratakan material hasil dumping agar sesuai kontur.</p>
+        <p>-	Fungsi: Menciptakan permukaan yang seragam dan stabil.</p>
+        <p>-	Cara kerja: Dozer atau grader menyebar tanah secara merata, layer by layer (maks 30 cm), siap untuk pemadatan</p>
+    </ol>
+    </div>
+</div>
+<script>
+function openPopup(id) {
+    document.getElementById(id).style.display = "flex";
+}
+function closePopup(id) {
+    document.getElementById(id).style.display = "none";
+}
+</script>
+
+</body>
+</html>
