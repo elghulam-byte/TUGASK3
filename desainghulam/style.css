@@ -4,9 +4,9 @@
   /* Hijau Tua/Corporate */
   --secondary-color: #e8e8f5;
   /* Latar Belakang Hijau Sangat Terang */
-  --accent-color: #00ff15;
+  --accent-color: #2a6d2f;
   /* Hijau Muda untuk Aksi/Highlight */
-  --text-color: #34d17d;
+  --text-color: #000000;
   /* Teks Hijau Gelap */
   --light-text: #fff;
   --border-color: #c8d1e6;
@@ -280,7 +280,7 @@ section:last-child {
 .main-footer {
   text-align: center;
   padding: 30px 20px;
-  background-color: #386a8e;
+  background-color: #508e38;
   /* Hijau Medium */
   color: white;
   /* --- MODIFIKASI ANIMASI DIMULAI DI SINI --- */
