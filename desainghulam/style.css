@@ -1,12 +1,12 @@
 /* Pengaturan Umum & Reset */
 :root {
-  --primary-color: #00028f;
+  --primary-color: #008f0c;
   /* Hijau Tua/Corporate */
   --secondary-color: #e8e8f5;
   /* Latar Belakang Hijau Sangat Terang */
-  --accent-color: #0800ff;
+  --accent-color: #00ff15;
   /* Hijau Muda untuk Aksi/Highlight */
-  --text-color: #3459d1;
+  --text-color: #34d17d;
   /* Teks Hijau Gelap */
   --light-text: #fff;
   --border-color: #c8d1e6;
@@ -59,7 +59,7 @@ h2 {
 }
 
 .cta-btn:hover {
-  background-color: #383f9f;
+  background-color: #389f41;
   /* Hijau Muda lebih gelap */
   /* --- MODIFIKASI ANIMASI DIMULAI DI SINI --- */
   transform: translateY(-2px);
@@ -272,7 +272,7 @@ section:last-child {
 #contactForm input[type="email"]:focus,
 #contactForm textarea:focus {
   border-color: var(--accent-color);
-  box-shadow: 0 0 5px rgba(94, 74, 195, 0.5);
+  box-shadow: 0 0 5px rgba(74, 195, 110, 0.5);
   /* Shadow fokus hijau */
 }
 
@@ -354,9 +354,9 @@ section:last-child {
   --dark-text: #f0f0f0;
   --dark-secondary-text: #a0a0a0;
   --dark-border: #444444;
-  --dark-primary-color: #7971ff;
+  --dark-primary-color: #71ff94;
   /* Biru/Ungu untuk Primary (kontras) */
-  --dark-accent-color: #3f53ff;
+  --dark-accent-color: #69ff3f;
   /* Hijau Neon untuk Accent (kontras) */
 }
 
@@ -473,7 +473,7 @@ section:last-child {
 
 /* Footer */
 .dark-mode .main-footer {
-  background-color: #276c7d;
+  background-color: #277d48;
 }
 
 /* Tombol Toggle Dark Mode Styling Tambahan */
@@ -500,5 +500,5 @@ section:last-child {
 }
 
 .dark-mode .dark-mode-toggle:hover {
-  background-color: #a0a0ff;
+  background-color: #a0ffbc;
 }
